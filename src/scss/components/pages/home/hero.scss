@@ -1,0 +1,145 @@
+section.hero {
+    .bg-hero {
+        background-image: url(/public/img/hero/home.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 99%;
+        height: 98vh;
+        margin: 10px;
+        position: fixed;
+        border-radius: 10px;
+        z-index: -1;
+
+        &::after {
+            content: "";
+            background-image: url(/public/images/shadowHome.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 360px;
+            display: block;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .lang {
+            position: absolute;
+            left: 20px;
+            top: 25px;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+
+            .text-lang {
+                color: #fff;
+                direction: ltr;
+                margin-right: 4px;
+                font-size: 17px;
+            }
+
+            .flag {
+                border-radius: 50px;
+                margin: 1px 4px -1px;
+                overflow: hidden;
+                width: 32px;
+                height: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            min-height: 100px;
+            align-items: center;
+
+            .logoHome {
+                width: 300px;
+                height: 46px;
+            }
+
+            .categorys {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 88%;
+                margin: 40px 0;
+
+                .item-catgory {
+                    border: 1px solid #ffffff3d;
+                    background: #ffffff1a;
+                    border-radius: 10px;
+                    width: 82px;
+                    height: 82px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: all 0.3s;
+
+                    .icon-catgory {
+                        font-size: 33px;
+                        color: #ffffff3d;
+                        transition: all 0.3s;
+                    }
+
+                    &:hover {
+                        border: 1px solid #fff;
+
+                        .icon-catgory {
+                            color: #fff;
+                        }
+                    }
+
+                }
+            }
+
+            .movieBox {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 45px;
+
+                .icon-movie {
+                    font-size: 55px;
+                    color: #fff;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                }
+
+                .text-movie {
+                    color: #fff;
+                    margin-right: 5px;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                }
+
+                &:hover {
+                    .icon-movie {
+                        font-size: 70px;
+                        transform: translateX(-87px) scale(1);
+                    }
+    
+                    .text-movie {
+                        opacity: 0;
+                        transform: translateX(50px);
+                    }
+                }
+            }
+        }
+    }
+
+
+}
