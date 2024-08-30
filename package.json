@@ -1,0 +1,22 @@
+{
+  "name": "satrina",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.2"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "sass": "^1.77.8",
+    "slick": "^1.12.2",
+    "slick-carousel": "^1.8.1",
+    "slick-slider": "^1.8.2",
+    "vite-plugin-inspect": "^0.8.7"
+  }
+}
