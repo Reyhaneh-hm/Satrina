@@ -1,0 +1,338 @@
+.contact {
+    .card {
+        margin-top: 35px;
+        border: 1px solid #ffffff24;
+        backdrop-filter: blur(15px);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 780px;
+
+        .text-contact {
+            display: flex;
+            align-items: center;
+            margin: 60px;
+
+            .logo-contact {
+                width: 20px;
+            }
+
+            .titr-contact {
+                color: #fff;
+                margin-right: 10px;
+                font-size: 23px;
+            }
+        }
+
+        .desc-contact {
+            color: #fff;
+            line-height: 2.1;
+            margin: 0 75px;
+            text-align: justify;
+            font-size: 17px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 5;
+        }
+
+        .text-form {
+            display: flex;
+            align-items: center;
+            margin: 100px 0 60px;
+
+            .icon-form {
+                color: #ccb140;
+                font-size: 24px;
+            }
+
+            .titr-form {
+                color: #fff;
+                margin-right: 5px;
+                font-size: 23px;
+            }
+        }
+
+        .form {
+            margin: 0 75px;
+
+            .input_box {
+                margin-bottom: 40px;
+                position: relative;
+
+                label {
+                    // position: relative;
+
+
+
+                    select {
+                        color: #9d9d9d;
+                        cursor: pointer;
+                        background-color: transparent;
+                        width: 100%;
+                        height: 80px;
+                        padding: 4px 8px 0;
+                        font-size: 17px;
+                        outline: 0;
+                        border: 2px solid rgb(255 255 255 / 40%);
+                        border-radius: 10px;
+                        transition: all 0.3s;
+
+                        &:focus {
+                            border: 2px solid #fff;
+                            color: #fff;
+                        }
+
+                        option:first-child {
+                            color: #fff;
+                        }
+
+                        option:not(:first-child) {
+                            color: #9d9d9d;
+                        }
+                    }
+
+                    textarea {
+                        color: #9d9d9d;
+                        cursor: pointer;
+                        background-color: transparent;
+                        width: 100%;
+                        height: 250px;
+                        padding: 20px 8px 0;
+                        font-size: 17px;
+                        outline: 0;
+                        border: 2px solid rgb(255 255 255 / 40%);
+                        border-radius: 10px;
+                        resize: none;
+                        transition: all 0.3s;
+
+                        &::placeholder {
+                            transition: all 0.3s;
+                        }
+
+                        &:focus {
+                            border: 2px solid #fff;
+                            color: #fff;
+
+                            &::placeholder {
+                                color: #fff;
+                                top: 10px;
+                                font-size: 13px;
+                            }
+                        }
+
+                    }
+
+                    .input {
+                        background-color: transparent;
+                        color: rgba(255, 255, 255, 0.5);
+                        width: 100%;
+                        height: 80px;
+                        padding: 20px 20px 5px 10px;
+                        outline: 0;
+                        border: 2px solid rgb(255 255 255 / 40%);
+                        border-radius: 10px;
+
+                        &+span {
+                            color: rgba(255, 255, 255, 0.5);
+                            position: absolute;
+                            right: 10px;
+                            top: 10px;
+                            font-size: 12px;
+                            cursor: text;
+                            transition: 0.3s ease;
+                        }
+
+                        &:placeholder-shown+span {
+                            top: 30px;
+                            font-size: 17px;
+                        }
+
+
+                        &:focus {
+                            border: 2px solid #fff;
+                            color: #fff;
+                        }
+
+                        &:focus+span {
+                            color: #fff;
+                            top: 10px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+            .submit {
+                background-color: transparent;
+                color: #ffffff66;
+                width: 300px;
+                height: 80px;
+                margin: -5px 0 70px;
+                outline: 0;
+                border: 2px solid #ffffff66;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 0.3s;
+                font-size: 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                float: left;
+
+
+                &:hover {
+                    color: #fff;
+                    border: 2px solid #fff;
+                }
+            }
+
+            @keyframes pulse {
+                from {
+                    transform: scale(0.9);
+                    opacity: 1;
+                }
+
+                to {
+                    transform: scale(1.8);
+                    opacity: 0;
+                }
+            }
+
+        }
+
+    }
+
+
+    .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 50px 0;
+
+        .item-social {
+            padding: 0 5px;
+
+        }
+
+        .icon-social {
+            font-size: 32px;
+            color: #948f8d;
+            transition: all 0.3s;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .contact .card .form .input_box label .input {
+        height: 65px;
+        font-size: 15px;
+    }
+
+    .contact .card .form .input_box label .input+span {
+        top: 24px;
+        font-size: 15px;
+    }
+
+
+    .contact .card .form .input_box label .input+span {
+        top: 10px;
+        font-size: 12px;
+    }
+
+    .contact .card .form .input_box label .input:placeholder-shown+span {
+        top: 24px;
+        font-size: 15px;
+    }
+
+    .contact .card .form .input_box label .input:focus+span {
+        top: 10px;
+        font-size: 12px;
+    }
+
+    .contact .card .form .input_box label select {
+        height: 65px;
+        padding: 3px 8px 0;
+        font-size: 16px;
+    }
+
+    .contact .card .form .input_box label textarea {
+        height: 200px;
+        font-size: 15px;
+    }
+
+    .contact .card .form .submit {
+        height: 65px;
+        font-size: 17px;
+    }
+
+    .contact .social .icon-social {
+        font-size: 31px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact .card .desc-contact {
+        font-size: 16px;
+    }
+    .contact .card .text-contact .titr-contact {
+        font-size: 21px;
+    }
+    .contact .card .text-form .titr-form {
+        font-size: 21px;
+    }
+    .contact .card .form .input_box {
+        margin-bottom: 30px;
+    }
+    .contact .card .form .submit {
+        height: 60px;
+        width: 100%;
+    }
+    .contact .social .icon-social {
+        font-size: 29px;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .contact .card .desc-contact {
+        color: #fff;
+        line-height: 2.1;
+        margin: 0 45px;
+    }
+    .contact .card .form {
+        margin: 0 45px;
+    }
+
+    .contact .card .form .input_box label textarea {
+        line-height: 1.7;
+        padding: 12px 8px 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .contact .card .desc-contact {
+        margin: 0 20px;
+    }
+    .contact .card .form {
+        margin: 0 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .contact .card .text-contact {
+        margin: 45px 0;
+    }
+    .contact .card .text-form {
+        margin: 87px 0 50px;
+    }
+    
+    
+}
