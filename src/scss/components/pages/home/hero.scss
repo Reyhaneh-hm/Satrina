@@ -78,7 +78,7 @@ section.hero {
                 width: 300px;
                 height: 46px;
 
-                .img-logoHome{
+                .img-logoHome {
                     width: 250px;
                     position: relative;
                     right: 20px;
@@ -208,21 +208,26 @@ section.hero {
     }
 }
 
-//Responsive
+/*-------------Responsive-------------*/
 @media screen and (max-width: 2560px) {
     section.hero {
-        .bg-hero::after {
-            height: 500px;
-        }
 
         .bg-hero {
             margin: 7px;
+
+            &::after {
+                height: 500px;
+            }
         }
 
-        .card .content .close {
-            font-size: 70px;
-            left: 65px;
-            top: 25px;
+        .card {
+            .content {
+                .close {
+                    font-size: 70px;
+                    left: 65px;
+                    top: 25px;
+                }
+            }
         }
     }
 }
@@ -258,49 +263,81 @@ section.hero {
     }
 }
 
-@media screen and (max-width: 1024px) {
-    section.hero .card .content .categorys {
-        width: 85%;
-    }
+@media screen and (max-width: 768px) {
+    section.hero {
+        .card {
+            .content {
+                .categorys {
+                    width: 85%;
 
-    section.hero .card .content .categorys .item-catgory {
-        width: 78px;
-        height: 78px;
+                    .item-catgory {
+                        width: 78px;
+                        height: 78px;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media screen and (max-width: 425px) {
-    section.hero .bg-hero {
-        margin: 2px;
-        height: 99.5vh;
-    }
+    section.hero {
+        .bg-hero {
+            margin: 2px;
+            height: 99.5vh;
+        }
 
-    section.hero .card .content .close {
-        font-size: 45px;
+        .card {
+            .content {
+                .close {
+                    font-size: 45px;
+                }
+            }
+        }
     }
 }
 
 @media screen and (max-width: 375px) {
-    .slider .card .sliderBox {
-        width: 240px;
-        left: 55px;
+    .slider {
+        .card {
+            .sliderBox {
+                width: 240px;
+                left: 55px;
+            }
+        }
     }
 
-    section.hero .card .content .categorys .item-catgory {
-        width: 69px;
-        height: 69px;
+    section.hero {
+        .card {
+            .content {
+                .categorys {
+                    .item-catgory {
+                        width: 69px;
+                        height: 69px;
+                    }
+                }
+            }
+        }
     }
-
 }
+
 @media screen and (max-width: 320px) {
-    section.hero .card .content .categorys {
-        margin: 28px 0;
-    }
-    section.hero .card .content .categorys .item-catgory {
-        width: 60px;
-        height: 60px;
-    }
-    section.hero .card .content .categorys .item-catgory .icon-catgory {
-        font-size: 30px;
+    section.hero {
+        .card {
+            .content {
+                .categorys {
+                    margin: 28px 0;
+
+                    .item-catgory {
+                        width: 60px;
+                        height: 60px;
+
+                        .icon-catgory {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

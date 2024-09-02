@@ -79,10 +79,52 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 15px;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    background: rgb(255, 255, 255);
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 15%, rgba(0, 0, 0, 1) 100%);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-radius: 15px;
+                }
 
                 .imgSlider {
                     width: 100%;
                     height: 100%;
+                }
+
+                .text-itemSlider {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    color: #fff;
+                    z-index: 1;
+                    padding: 15px;
+
+                    .titr-itemSlider {
+                        font-size: 16px;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 1;
+                        transform: translateY(0px);
+                        transition: all 0.3s;
+                    }
+                }
+
+                &:hover {
+                    .text-itemSlider {
+                        .titr-itemSlider {
+                            transform: translateY(-5px);
+                        }
+                    }
                 }
             }
 
@@ -220,65 +262,72 @@
 }
 
 @media screen and (max-width: 425px) {
-    .slider .card .calling {
-        bottom: -20px;
-    }
+    .slider {
+        .card {
+            .calling {
+                bottom: -20px;
+            }
 
-    .slider .card .sliderBox {
-        width: 312px;
-        left: 45px;
-    }
+            .sliderBox {
+                width: 255px;
+                left: 73px;
+            }
 
-    .slider .card .sliderBox {
-        width: 255px;
-        left: 73px;
-    }
+            .text-slider {
+                width: 405px;
+                padding: 0 40px;
 
-    .slider .card .text-slider {
-        width: 405px;
-        padding: 0 35px;
-    }
+                .titr-slider {
+                    .text-titrSlider {
+                        font-size: 16px;
+                    }
 
-    .slider .card .text-slider .titr-slider .text-titrSlider {
-        font-size: 16px;
-    }
+                    .img-titrSlider {
+                        width: 19px;
+                    }
+                }
 
-    .slider .card .text-slider .titr-slider .img-titrSlider {
-        width: 19px;
-    }
+                .down-katalog {
+                    .text-Katalog {
+                        font-size: 12px;
+                    }
 
-    .slider .card .text-slider .down-katalog .text-Katalog {
-        font-size: 12px;
-    }
-
-    .slider .card .text-slider .down-katalog .icon-Katalog {
-        font-size: 12px;
-    }
-
-    .slider .card .text-slider {
-        width: 405px;
-        padding: 0 40px;
+                    .icon-Katalog {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media screen and (max-width: 375px) {
-    .slider .card .sliderBox {
-        width: 240px;
-        left: 55px;
-    }
+    .slider {
+        .card {
+            .sliderBox {
+                width: 240px;
+                left: 55px;
+            }
 
-    .slider .card .text-slider {
-        width: 352px;
-        padding: 0 22px;
+            .text-slider {
+                width: 352px;
+                padding: 0 22px;
+            }
+        }
     }
 }
+
 @media screen and (max-width: 320px) {
-    .slider .card .text-slider {
-        width: 300px;
-        padding: 0 5px;
-    }
-    .slider .card .sliderBox {
-        width: 217px;
-        left: 40px;
+    .slider {
+        .card {
+            .text-slider {
+                width: 300px;
+                padding: 0 5px;
+            }
+            .sliderBox {
+                width: 217px;
+                left: 40px;
+            }
+        }
     }
 }

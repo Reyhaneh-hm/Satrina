@@ -60,6 +60,20 @@
                 overflow: hidden;
                 border-radius: 15px;
                 flex-shrink: 0;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    background: rgb(255, 255, 255);
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 15%, rgba(0, 0, 0, 1) 100%);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-radius: 15px;
+                }
 
                 .imgBlog {
                     border-radius: 15px;
@@ -67,12 +81,64 @@
                     width: 100%;
                     height: 100%;
                 }
+
+                .textBox-itemBlog {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    color: #fff;
+                    z-index: 1;
+                    padding: 15px;
+
+                    .titr-itemBlog {
+                        font-size: 21px;
+                        margin: 15px 0;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 1;
+                        transform: translateY(100px);
+                        transition: all 0.5s;
+                    }
+
+                    .text-itemBlog {
+                        text-align: justify;
+                        font-size: 14.5px;
+                        line-height: 1.7;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 4;
+                        opacity: 0;
+                        transform: translateY(120px);
+                        transition: all 0.5s;
+                    }
+                }
+
+                &:hover {
+                    .textBox-itemBlog {
+                        .titr-itemBlog {
+                            font-size: 24px;
+                            transform: translateY(0px);
+                        }
+
+                        .text-itemBlog {
+                            opacity: 1;
+                            transform: translateY(0px);
+                        }
+                    }
+                }
+
             }
         }
     }
 }
 
-//Responsive
+
+
+/*-------------Responsive-------------*/
 @media screen and (max-width: 2560px) {
     .blog {
         .card {
@@ -101,46 +167,66 @@
         }
     }
 }
-@media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 768px) {
     .blog {
         .card {
-        
-        .blogBox {
+
+            .blogBox {
                 width: 78%;
             }
         }
     }
 }
+
 @media screen and (max-width: 425px) {
-    .blog .card .blogBox .item-blog {
-        margin: 0 5px;
-        display: block;
-        width: 303px;
-        height: 425px;
-    }
-    .blog .card {
-        min-height: 700px;
-    }
-    .blog .card .text-blog {
-        font-size: 21px;
-        vertical-align: middle;
+    .blog {
+        .card {
+            min-height: 700px;
+
+            .blogBox {
+                .item-blog {
+                    margin: 0 5px;
+                    display: block;
+                    width: 303px;
+                    height: 425px;
+                }
+            }
+
+            .text-blog {
+                font-size: 21px;
+                vertical-align: middle;
+            }
+        }
     }
 }
+
 @media screen and (max-width: 375px) {
-    .blog .card .blogBox {
-        width: 91%;
+    .blog {
+        .card {
+            .blogBox {
+                width: 91%;
+            }
+        }
     }
 }
+
 @media screen and (max-width: 320px) {
-    .blog .card .text-blog {
-        margin: 39px 0;
-        font-size: 19px;
-    }
-    .blog .card .blogBox .item-blog {
-        width: 258px;
-        height: 372px;
-    }
-    .blog .card {
-        min-height: 590px;
+    .blog {
+        .card {
+            min-height: 590px;
+
+            .text-blog {
+                margin: 39px 0;
+                font-size: 19px;
+            }
+
+            .blogBox {
+                .item-blog {
+                    width: 258px;
+                    height: 372px;
+                }
+            }
+        }
     }
 }

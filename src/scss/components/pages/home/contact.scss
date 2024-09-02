@@ -231,108 +231,147 @@
 
 @media screen and (max-width: 1024px) {
 
-    .contact .card .form .input_box label .input {
-        height: 65px;
-        font-size: 15px;
-    }
+    .contact {
+        .card {
+            .form {
+                .input_box {
+                    label {
+                        .input {
+                            height: 65px;
+                            font-size: 15px;
+                        }
 
-    .contact .card .form .input_box label .input+span {
-        top: 24px;
-        font-size: 15px;
-    }
+                        .input+span {
+                            top: 10px;
+                            font-size: 12px;
+                        }
 
+                        .input:placeholder-shown+span {
+                            top: 24px;
+                            font-size: 15px;
+                        }
 
-    .contact .card .form .input_box label .input+span {
-        top: 10px;
-        font-size: 12px;
-    }
+                        .input:focus+span {
+                            top: 10px;
+                            font-size: 12px;
+                        }
 
-    .contact .card .form .input_box label .input:placeholder-shown+span {
-        top: 24px;
-        font-size: 15px;
-    }
+                        select {
+                            height: 65px;
+                            padding: 3px 8px 0;
+                            font-size: 16px;
+                        }
 
-    .contact .card .form .input_box label .input:focus+span {
-        top: 10px;
-        font-size: 12px;
-    }
+                        textarea {
+                            height: 200px;
+                            font-size: 15px;
+                        }
+                    }
+                }
 
-    .contact .card .form .input_box label select {
-        height: 65px;
-        padding: 3px 8px 0;
-        font-size: 16px;
-    }
+                .submit {
+                    height: 65px;
+                    font-size: 17px;
+                }
+            }
+        }
 
-    .contact .card .form .input_box label textarea {
-        height: 200px;
-        font-size: 15px;
-    }
-
-    .contact .card .form .submit {
-        height: 65px;
-        font-size: 17px;
-    }
-
-    .contact .social .icon-social {
-        font-size: 31px;
+        .social {
+            .icon-social {
+                font-size: 31px;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 768px) {
-    .contact .card .desc-contact {
-        font-size: 16px;
-    }
-    .contact .card .text-contact .titr-contact {
-        font-size: 21px;
-    }
-    .contact .card .text-form .titr-form {
-        font-size: 21px;
-    }
-    .contact .card .form .input_box {
-        margin-bottom: 30px;
-    }
-    .contact .card .form .submit {
-        height: 60px;
-        width: 100%;
-    }
-    .contact .social .icon-social {
-        font-size: 29px;
-    }
+    .contact {
+        .card {
+            .desc-contact {
+                font-size: 16px;
+            }
 
+            .text-contact {
+                .titr-contact {
+                    font-size: 21px;
+                }
+            }
+
+            .text-form {
+                .titr-form {
+                    font-size: 21px;
+                }
+            }
+
+            .form {
+                .input_box {
+                    margin-bottom: 30px;
+                }
+
+                .submit {
+                    height: 60px;
+                    width: 100%;
+                }
+            }
+        }
+
+        .social {
+            .icon-social {
+                font-size: 29px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 425px) {
-    .contact .card .desc-contact {
-        color: #fff;
-        line-height: 2.1;
-        margin: 0 45px;
-    }
-    .contact .card .form {
-        margin: 0 45px;
-    }
+    .contact {
+        .card {
+            .desc-contact {
+                color: #fff;
+                line-height: 2.1;
+                margin: 0 45px;
+            }
 
-    .contact .card .form .input_box label textarea {
-        line-height: 1.7;
-        padding: 12px 8px 0;
+            .form {
+                margin: 0 45px;
+
+                .input_box {
+                    label {
+                        textarea {
+                            line-height: 1.7;
+                            padding: 12px 8px 0;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
 @media screen and (max-width: 375px) {
-    .contact .card .desc-contact {
-        margin: 0 20px;
-    }
-    .contact .card .form {
-        margin: 0 20px;
+    .contact {
+        .card {
+            .desc-contact {
+                margin: 0 20px;
+            }
+
+            .form {
+                margin: 0 20px;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 320px) {
-    .contact .card .text-contact {
-        margin: 45px 0;
+    .contact {
+        .card {
+            .text-contact {
+                margin: 45px 0;
+            }
+
+            .text-form {
+                margin: 87px 0 50px;
+            }
+        }
     }
-    .contact .card .text-form {
-        margin: 87px 0 50px;
-    }
-    
-    
 }

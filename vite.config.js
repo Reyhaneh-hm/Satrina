@@ -14,8 +14,8 @@ export default {
     rollupOptions: {
       input: {
         index: resolve(__dirname, "./index.html"),
-        listBlog: resolve(__dirname, "./list-blog.html"),
-        showBlog: resolve(__dirname, "./show-blog.html"),
+        // listBlog: resolve(__dirname, "./listBlog.html"),
+        showBlog: resolve(__dirname, "./showBlog.html"),
       },
     },
   },
