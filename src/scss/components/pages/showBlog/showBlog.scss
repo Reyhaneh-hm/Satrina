@@ -37,7 +37,7 @@ section.showBlog {
 
         .logoHeader {
             .img-logoHeader {
-                width: 195px;
+                width: 180px;
             }
         }
 
@@ -87,16 +87,16 @@ section.showBlog {
         .bg-blog {
             background: #fff;
             width: 100%;
-            min-height: 900px;
+            min-height: 730px;
             position: fixed;
-            top: 125px;
+            top: 100px;
             border-radius: 25px;
 
             .back {
-                display: block;
-                position: relative;
-                left: 30px;
-                top: 50px;
+                display: inline-block;
+                position: absolute;
+                left: 55px;
+                top: 35px;
                 direction: ltr;
                 transition: all 0.3s;
 
@@ -112,7 +112,7 @@ section.showBlog {
                 justify-content: center;
                 font-size: 25px;
                 position: relative;
-                top: 50px;
+                top: 57px;
                 
                 .icon-blog {
                     color: #ccb140;
@@ -131,13 +131,25 @@ section.showBlog {
                 margin: 0 auto;
 
 
+                #filterBtn {
+                    background-color: #ccb140;
+                    border-radius: 5px;
+                    color: #fff;
+                    display: none;
+                    font-size: 12px;
+                    font-weight: 100;
+                    padding: 15px 10px;
+                    text-align: center;
+                    margin: 40px 0 -25px;
+                }
+
                 .filter {
                     // background-color: #fbfbfb;
                     width: 330px;
                     border-radius: 15px;
                     position: relative;
                     z-index: 2;
-                    top: 120px;
+                    top: 112px;
 
                     .box-filter {
                         height: 530px;
@@ -227,7 +239,7 @@ section.showBlog {
                     width: 72%;
                     height: 530px;
                     position: relative;
-                    top: 120px;
+                    top: 112px;
                     overflow-y: auto;
                     white-space: nowrap;
                     padding-right: 5px;
@@ -328,27 +340,26 @@ section.showBlog {
                         }
                     }
                 }
-
-                .social {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: absolute;
-                    bottom: 135px;
-            
-                    .item-social {
-                        padding: 0 10px;
-            
-                    }
-            
-                    .icon-social {
-                        font-size: 32px;
-                        color: #948f8d;
-                        transition: all 0.3s;
-            
-                        &:hover {
-                            color: #ccb140;
-                        }
+            }
+            .social {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                bottom: -190px;
+        
+                .item-social {
+                    padding: 0 10px;
+        
+                }
+        
+                .icon-social {
+                    font-size: 32px;
+                    color: #948f8d;
+                    transition: all 0.3s;
+        
+                    &:hover {
+                        color: #ccb140;
                     }
                 }
             }
