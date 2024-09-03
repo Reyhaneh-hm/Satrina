@@ -31,7 +31,7 @@ section.showPost {
         padding: 20px;
         border-radius: 23px;
         position: relative;
-        top: 125px;
+        top: 85px;
         margin: 0 0 50px 0;
 
         .head {
@@ -183,6 +183,94 @@ section.showPost {
     section.showPost {
         .bg {
             margin: 9px 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section.showPost {
+        .post {
+            .head {
+                .imageHead {
+                    height: 330px;
+                }
+            }
+
+            .content {
+                .justify-content-center {
+                    .item-content {
+                        width: 49%;
+                    }
+                }
+
+                .img-content {
+                    height: 232px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    section.showPost {
+        .bg {
+            margin: 9px 2px;
+        }
+
+        .post {
+            .content {
+                .justify-content-center {
+                    flex-direction: column;
+
+                    .item-content {
+                        width: 100%;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .head {
+                .post-info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 103px;
+                }
+            }
+
+        }
+        ul.breadcrumb {
+            padding-right: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    section.showPost {
+        .post {
+            .content {
+                .img-content {
+                    height: 190px;
+                    margin: 10px 0;
+                }
+
+                .text-content {
+                    line-height: 2.5;
+                }
+            }
+
+            .head {
+                .imageHead {
+                    height: 200px;
+                }
+
+                .info {
+                    .title-info {
+                        font-size: 25px;
+                    }
+                }
+            }
+
         }
     }
 }

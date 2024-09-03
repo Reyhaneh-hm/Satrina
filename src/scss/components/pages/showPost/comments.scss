@@ -37,6 +37,10 @@
             padding: 15px;
             border-radius: 15px;
             width: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: stretch;
 
             .input_box {
                 position: relative;
@@ -87,6 +91,7 @@
                         margin-right: 2px;
                     }
                 }
+
                 .bottom.code {
                     padding-left: 5px;
                     mix-blend-mode: multiply;
@@ -156,10 +161,16 @@
 
                 .main_desc {
                     font-size: 15px;
+                    text-align: justify;
                     font-weight: 200;
                     color: #7f7f7f;
                     padding-inline: 15px;
                     line-height: 2.3;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 3;
                 }
 
                 .actions {
@@ -197,6 +208,7 @@
                     }
                 }
             }
+
             .comment_item.reply {
                 margin-right: 70px;
             }
@@ -227,6 +239,130 @@
 
         &:hover {
             color: #fff;
+        }
+    }
+}
+
+
+//Responsive
+@media screen and (max-width: 1024px) {
+
+    .comments {
+        .card {
+            .comment_form {
+                width: 33%;
+            }
+
+            .main_card {
+                width: 65%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .comments {
+        .card {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .main_card {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .comment_form {
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .comments {
+        .card {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .main_card {
+                width: 100%;
+                margin-bottom: 30px;
+
+                .comment_item.reply {
+                    margin-right: 30px;
+                }
+            }
+
+            .comment_form {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .comments {
+        .card {
+            .sec_title {
+                .title {
+                    font-size: 18px;
+                }
+            }
+
+            .main_card {
+                .comment_item {
+                    padding: 20px 10px;
+
+                    .head {
+                        .name {
+                            .title {
+                                font-weight: 300;
+                                font-size: 16px;
+                            }
+                        }
+
+                        .date {
+                            font-size: 11px;
+                        }
+                    }
+
+                    .main_desc {
+                        font-size: 13px;
+                    }
+
+                    .actions {
+                        li {
+                            span.num {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+
+                .comment_item.reply {
+                    margin-right: 20px;
+                }
+            }
+
+            .comment_form {
+                .input_box {
+                    textarea {
+                        font-size: 14px;
+                    }
+                }
+
+                .submit {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .social {
+        .item-social {
+            padding: 0 7px;
         }
     }
 }
