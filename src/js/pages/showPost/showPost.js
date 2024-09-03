@@ -1,1 +1,1 @@
-import '../../../scss/components/pages/showPost/showPost.scss';
+import '../../../scss/components/pages/showPost/index.scss';

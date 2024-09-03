@@ -12,6 +12,7 @@
     "vite": "^5.4.2"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
     "jquery": "^3.7.1",
     "json": "^11.0.0",
     "package-lock": "^1.0.5",

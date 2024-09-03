@@ -1,0 +1,188 @@
+section.showPost {
+
+    .bg {
+        background-image: url(/public/img/hero/home.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 99%;
+        height: 98vh;
+        margin: 10px;
+        position: fixed;
+        border-radius: 10px;
+        z-index: -1;
+
+        &::after {
+            content: "";
+            background-image: url(/public/images/shadowHome.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 45%;
+            display: block;
+            border-radius: 10px 10px 0 0;
+        }
+    }
+
+
+    .post {
+        background-color: #f5f7fa;
+        padding: 20px;
+        border-radius: 23px;
+        position: relative;
+        top: 125px;
+        margin: 0 0 50px 0;
+
+        .head {
+
+            .imageHead {
+                width: 100%;
+                height: 540px;
+                object-fit: cover;
+                margin-bottom: 20px;
+                border-radius: 15px;
+            }
+
+            // .grouping {
+            //     transition: all 0.3s;
+            //     color: #787878;
+            //     padding: 3px 10px;
+            //     border-radius: 5px;
+            //     background-color: #ebebeb;
+            //     font-size: 10px;
+            //     margin-bottom: 10px;
+            //     display: inline-block;
+            // }
+
+            .info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .title-info {
+                    color: #000;
+                    font-weight: 300;
+                }
+            }
+
+            .post-info {
+                margin-top: 10px;
+
+                .avatar-info {
+                    max-width: 30px;
+                    vertical-align: middle;
+                }
+
+                .avatar-link {
+                    color: #ccb140;
+                    font-size: 13px;
+                    margin-right: 5px;
+                    font-weight: 200;
+                }
+
+                span {
+                    color: #7d7d7d;
+                    font-size: 13px;
+                    position: relative;
+                    margin-right: 10px;
+                    padding-right: 10px;
+                    font-weight: 200;
+
+                    &::before {
+                        content: "";
+                        width: 4px;
+                        height: 4px;
+                        background: #ccb140;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -2px;
+                        display: block;
+                        right: -2px;
+                    }
+                }
+            }
+        }
+
+        .content {
+            margin-top: 20px;
+
+            .text-content {
+                line-height: 3.2;
+                font-size: 16px;
+                color: #9d9d9d;
+                margin-bottom: 13px;
+                text-align: justify;
+
+                .link-textContent {
+                    color: #ccb140;
+                }
+            }
+
+            .img-content {
+                margin-bottom: 20px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 13px;
+                margin-block: 20px;
+            }
+
+            .justify-content-center {
+                display: flex;
+                justify-content: center;
+
+                .item-content {
+                    margin: 0 10px;
+                    cursor: pointer;
+                }
+            }
+
+            ul,
+            ol {
+                margin-bottom: 13px;
+                margin-right: 15px;
+
+                li {
+                    list-style: auto;
+                    color: #000;
+                    padding-right: 5px;
+                    padding-bottom: 7px;
+
+                }
+
+                &:hover {
+                    color: #ccb140;
+                }
+            }
+
+            ul {
+                li {
+                    list-style: disc;
+                }
+            }
+
+            .inner_link {
+                background-color: #000;
+                color: #fff;
+                transition: all 0.3s;
+                font-weight: 200;
+                border-radius: 10px;
+                padding: 15px 25px;
+
+                &:hover {
+                    background-color: #ccb140;
+                }
+            }
+        }
+    }
+}
+
+//Responsive
+@media screen and (max-width: 1024px) {
+    section.showPost {
+        .bg {
+            margin: 9px 5px;
+        }
+    }
+}
