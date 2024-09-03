@@ -133,6 +133,32 @@
 
             }
         }
+
+        .goToShowBlog {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin: 25px 0;
+
+            .titr-go,
+            .icon-go {
+                color: #fff;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+
+            .icon-go {
+                margin-right: 5px;
+            }
+
+            &:hover {
+
+                .titr-go,
+                .icon-go {
+                    color: #ccb140;
+                }
+            }
+        }
     }
 }
 
