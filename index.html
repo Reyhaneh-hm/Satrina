@@ -6,6 +6,7 @@
   <meta http-equiv="refresh">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/x-icon" href="/public/images/logo2.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
   <title>ساترینا</title>
 </head>
 
@@ -34,10 +35,10 @@
                 <img src="./public/images/logo3.png" class="img-logoHome" alt="logo">
               </a>
               <div class="categorys">
-                <div class="item-catgory" data-fancybox="gallery"><i class="icon-catgory icon-Shower"></i></div>
-                <div class="item-catgory" data-fancybox="gallery"><i class="icon-catgory icon-Dresser"></i></div>
-                <div class="item-catgory" data-fancybox="gallery"><i class="icon-catgory icon-Bath"></i></div>
-                <div class="item-catgory" data-fancybox="gallery"><i class="icon-catgory icon-Toilet-1"></i></div>
+                <a href="./public/img/blog/blog1.png" class="item-catgory" data-fancybox="iconCatgorys"><i class="icon-catgory icon-Shower"></i></a>
+                <a href="./public/img/blog/blog2.png" class="item-catgory" data-fancybox="iconCatgorys"><i class="icon-catgory icon-Dresser"></i></a>
+                <a href="./public/img/blog/blog3.png" class="item-catgory" data-fancybox="iconCatgorys"><i class="icon-catgory icon-Bath"></i></a>
+                <a href="./public/img/blog/blog4.png" class="item-catgory" data-fancybox="iconCatgorys"><i class="icon-catgory icon-Toilet-1"></i></a>
               </div>
               <div class="movieBox">
                 <i class="icon-movie icon-Play" id="play-icon"></i>
@@ -80,43 +81,43 @@
             </div>
 
             <div class="sliderBox">
-              <a href="./public/img/slider/slider1.png" data-fancybox="gallery" class="item-slider">
-                <img src="./public/img/slider/slider1.png" class="imgSlider fancybox-image" alt="slider">
+              <a href="./public/img/slider/slider1.png" data-fancybox="product" class="item-slider">
+                <img src="./public/img/slider/slider1.png" class="imgSlider" alt="slider">
                 <div class="text-itemSlider">
                   <h2 class="titr-itemSlider">عنوان کاتالوگ</h2>
                 </div>
               </a>
 
-              <a href="./public/img/slider/slider1.png" data-fancybox="gallery" class="item-slider">
-                <img src="./public/img/slider/slider2.png" class="imgSlider fancybox-image" alt="slider">
+              <a href="./public/img/slider/slider2.png" data-fancybox="product" class="item-slider">
+                <img src="./public/img/slider/slider2.png" class="imgSlider" alt="slider">
                 <div class="text-itemSlider">
                   <h2 class="titr-itemSlider">عنوان کاتالوگ</h2>
                 </div>
               </a>
 
-              <a href="./public/img/slider/slider1.png" data-fancybox="gallery" class="item-slider">
-                <img src="./public/img/slider/slider3.png" class="imgSlider fancybox-image" alt="slider">
+              <a href="./public/img/slider/slider3.png" data-fancybox="product" class="item-slider">
+                <img src="./public/img/slider/slider3.png" class="imgSlider" alt="slider">
                 <div class="text-itemSlider">
                   <h2 class="titr-itemSlider">عنوان کاتالوگ</h2>
                 </div>
               </a>
 
-              <a href="./public/img/slider/slider1.png" data-fancybox="gallery" class="item-slider">
-                <img src="./public/img/slider/slider1.png" class="imgSlider fancybox-image" alt="slider">
+              <a href="./public/img/slider/slider1.png" data-fancybox="product" class="item-slider">
+                <img src="./public/img/slider/slider1.png" class="imgSlider" alt="slider">
                 <div class="text-itemSlider">
                   <h2 class="titr-itemSlider">عنوان کاتالوگ</h2>
                 </div>
               </a>
 
-              <a href="./public/img/slider/slider1.png" data-fancybox="gallery" class="item-slider">
-                <img src="./public/img/slider/slider2.png" class="imgSlider fancybox-image" alt="slider">
+              <a href="./public/img/slider/slider2.png" data-fancybox="product" class="item-slider">
+                <img src="./public/img/slider/slider2.png" class="imgSlider" alt="slider">
                 <div class="text-itemSlider">
                   <h2 class="titr-itemSlider">عنوان کاتالوگ</h2>
                 </div>
               </a>
 
-              <a href="./public/img/slider/slider1.png" data-fancybox="gallery" class="item-slider">
-                <img src="./public/img/slider/slider3.png" class="imgSlider fancybox-image" alt="slider">
+              <a href="./public/img/slider/slider3.png" data-fancybox="product" class="item-slider">
+                <img src="./public/img/slider/slider3.png" class="imgSlider" alt="slider">
                 <div class="text-itemSlider">
                   <h2 class="titr-itemSlider">عنوان کاتالوگ</h2>
                 </div>
@@ -391,6 +392,14 @@
   <script type="module" src="/main.js"></script>
   <script type="module" src="/src/js/pages/home/index.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("[data-fancybox]").fancybox();
+    });
+  </script>
+<script src="./src/js/base/fancyBox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 </body>
