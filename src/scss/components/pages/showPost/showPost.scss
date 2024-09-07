@@ -1,11 +1,27 @@
 section.showPost {
 
-    .nav .lang .text-lang {
-        color: #000;
-        font-weight: bold;
+    .nav {
+        background: #fff;
+        z-index: 2;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.28);
+        min-height: 70px;
+
+        .con-nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .lang {
+            .text-lang {
+                color: #000;
+                font-weight: bold;
+            }
+        }
     }
 
     .breadcrumb {
+        top: 100px;
         a {
             color: #000;
             font-weight: bold;
@@ -39,11 +55,9 @@ section.showPost {
 
 
     .post {
-        background-color: #f2f2f2;
-        padding: 20px;
         border-radius: 23px;
         position: relative;
-        top: 85px;
+        top: 105px;
         margin: 0 0 50px 0;
 
         .head {

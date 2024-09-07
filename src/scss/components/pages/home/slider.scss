@@ -18,8 +18,10 @@
                 display: flex;
                 align-items: center;
 
-                .img-titrSlider {
-                    width: 20px;
+                .icon-titrSlider {
+                    color: #cc3333;
+                    font-size: 18px;
+                    margin-bottom: 2px;
                 }
 
                 .text-titrSlider {
@@ -125,6 +127,7 @@
                     .imgSlider {
                         transform: scale(1.04);
                     }
+
                     .text-itemSlider {
                         .titr-itemSlider {
                             transform: translateY(-5px);
@@ -303,10 +306,6 @@
                 .titr-slider {
                     .text-titrSlider {
                         font-size: 16px;
-                    }
-
-                    .img-titrSlider {
-                        width: 19px;
                     }
                 }
 

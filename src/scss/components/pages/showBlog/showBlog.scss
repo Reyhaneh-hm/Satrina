@@ -49,6 +49,10 @@ section.showBlog {
         }
     }
 
+    ul.breadcrumb {
+        top: 90px;
+    }
+
 
 
     .card {
@@ -65,7 +69,7 @@ section.showBlog {
             position: relative;
             top: 95px;
             border-radius: 25px;
-            margin-bottom: 300px;
+            margin-bottom: 180px;
 
             .back {
                 display: inline-block;
@@ -93,6 +97,8 @@ section.showBlog {
 
                 .icon-blog {
                     color: #cc3333;
+                    margin: 0 0 4px 5px;
+                    font-size: 22px;
                 }
 
                 .titr-blog {
@@ -107,7 +113,7 @@ section.showBlog {
                 justify-content: space-around;
                 align-items: flex-start;
                 margin: 120px auto;
-                margin-bottom: 0;
+                margin-bottom: 30px;
 
 
                 #filterBtn {
@@ -306,7 +312,7 @@ section.showBlog {
                 align-items: center;
                 justify-content: center;
                 position: relative;
-                bottom: -175px;
+                bottom: -55px;
 
                 .item-social {
                     padding: 0 10px;
@@ -335,7 +341,6 @@ section.showBlog {
                 justify-content: center;
                 position: relative;
                 z-index: 1;
-                bottom: -115px;
 
                 li {
                     &:not(:last-child) {
@@ -379,14 +384,14 @@ section.showBlog {
                         &.arrow {
                             width: 106px;
                             border-radius: 40px;
-                            color: #cc3333;
+                            color: #888888;
                             justify-content: end;
                             justify-content: center;
                             display: flex;
                             align-items: center;
 
                             &:hover {
-                                color: #fff;
+                                color: #cc3333;
 
                                 .icon {
                                     background-color: #cc3333;
@@ -603,10 +608,6 @@ section.showBlog {
 
                     }
                 }
-
-                .social {
-                    bottom: -165px;
-                }
             }
         }
     }
@@ -667,6 +668,10 @@ section.showBlog {
 
 @media screen and (max-width: 425px) {
     section.showBlog {
+        .nav {
+            padding: 0 18px;
+        }
+
         .bg {
             margin: 9px 2px;
         }
@@ -674,7 +679,6 @@ section.showBlog {
         .card {
             .bg-blog {
                 width: 97%;
-                margin-bottom: 275px;
 
                 .back {
                     left: 30px;
@@ -744,11 +748,6 @@ section.showBlog {
                 .pagination {
                     display: none !important;
                 }
-
-                .social {
-                    bottom: -150px;
-                }
-
             }
         }
 
@@ -761,8 +760,27 @@ section.showBlog {
 
 @media screen and (max-width: 375px) {
     section.showBlog {
+
+        &::after,
+        &::before {
+            display: none;
+        }
+
+        .bg {
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            border-radius: 0;
+        }
+
+        section.showBlog .nav {
+            padding: 0 5px;
+        }
+
         .card {
             .bg-blog {
+                width: 101%;
+
                 .main-card {
                     .blogBox {
                         width: 102%;
@@ -771,7 +789,7 @@ section.showBlog {
                     #filterBtn {
                         top: -10px;
                         right: 0;
-                        width: 100%;
+                        width: 95%;
                     }
                 }
 
@@ -823,7 +841,6 @@ section.showBlog {
         .card {
             .bg-blog {
                 width: 108%;
-                margin-bottom: 260px;
 
                 .back {
                     left: 25px;
@@ -840,6 +857,7 @@ section.showBlog {
                     #filterBtn {
                         width: 105%;
                     }
+
                     .blogBox {
                         width: 115%;
                         top: 135px;
@@ -852,10 +870,6 @@ section.showBlog {
                             width: 72px;
                         }
                     }
-                }
-
-                .social {
-                    bottom: -150px;
                 }
             }
         }
