@@ -1,5 +1,29 @@
 section.hero {
 
+    &::after {
+        content: "";
+        width: 100%;
+        height: 7px;
+        background: #fff;
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: block;
+        z-index: 1;
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 5px;
+        background: #fff;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        display: block;
+        z-index: 1;
+    }
+
     .lang {
         position: absolute;
         left: 30px;
@@ -40,7 +64,7 @@ section.hero {
         background-repeat: no-repeat;
         background-size: cover;
         width: 99%;
-        height: 98vh;
+        height: 98.5vh;
         margin: 10px;
         position: fixed;
         border-radius: 10px;
@@ -117,7 +141,6 @@ section.hero {
                             color: #fff;
                         }
                     }
-
                 }
             }
 
@@ -159,47 +182,50 @@ section.hero {
             .modal {
                 display: none;
                 position: fixed;
-                z-index: 2;
+                z-index: 3;
                 left: 0;
                 top: 0;
                 width: 100%;
                 height: 100%;
                 border: 1px solid #ffffff24;
                 backdrop-filter: blur(15px);
+
+                .modal-content {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 80%;
+                    max-width: 1000px;
+
+                    video {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 15px;
+                    }
+                }
+
+                .close {
+                    color: #ffffff;
+                    /* float: left; */
+                    font-size: 52px;
+                    font-weight: bold;
+                    position: absolute;
+                    left: 40px;
+                    top: 20px;
+                    transition: all 0.3s;
+
+                    &:hover,
+                    &:focus {
+                        color: #cc3333;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                }
             }
 
-            .modal-content {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 80%;
-                max-width: 1000px;
-            }
 
-            .close {
-                color: #ffffff;
-                /* float: left; */
-                font-size: 52px;
-                font-weight: bold;
-                position: absolute;
-                left: 40px;
-                top: 20px;
-                transition: all 0.3s;
-            }
 
-            .close:hover,
-            .close:focus {
-                color: #cc3333;
-                text-decoration: none;
-                cursor: pointer;
-            }
-
-            video {
-                width: 100%;
-                height: auto;
-                border-radius: 15px;
-            }
 
 
 

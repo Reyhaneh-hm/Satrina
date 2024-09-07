@@ -69,6 +69,7 @@
 
         .sliderBox {
             width: 730px;
+            z-index: 2;
 
             .item-slider {
                 margin: 0 10px;
@@ -97,6 +98,7 @@
                 .imgSlider {
                     width: 100%;
                     height: 100%;
+                    transition: all 0.4s;
                 }
 
                 .text-itemSlider {
@@ -120,6 +122,9 @@
                 }
 
                 &:hover {
+                    .imgSlider {
+                        transform: scale(1.04);
+                    }
                     .text-itemSlider {
                         .titr-itemSlider {
                             transform: translateY(-5px);
@@ -170,14 +175,14 @@
             }
 
             &:hover {
-                border: 1px solid #ccb140;
+                border: 1px solid #cc3333;
 
                 .icon-call {
-                    color: #ccb140;
+                    color: #cc3333;
                 }
 
                 .text-call {
-                    color: #ccb140;
+                    color: #cc3333;
                 }
             }
         }
@@ -188,6 +193,7 @@
 .fancybox__caption {
     box-sizing: inherit;
 }
+
 .fancybox-image {
     margin: auto;
     display: block;
@@ -198,6 +204,7 @@
     user-select: none;
     filter: blur(0px);
 }
+
 /*-------------------------------*/
 
 //Responsive
@@ -340,6 +347,7 @@
                 width: 300px;
                 padding: 0 5px;
             }
+
             .sliderBox {
                 width: 217px;
                 left: 40px;

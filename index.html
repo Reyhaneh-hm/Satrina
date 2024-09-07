@@ -32,13 +32,17 @@
           <div class="card">
             <div class="content">
               <a href="" class="logoHome">
-                <img src="./public/images/logo3.png" class="img-logoHome" alt="logo">
+                <img src="./public/images/logo4.svg" class="img-logoHome" alt="logo">
               </a>
               <div class="categorys">
-                <a href="./public/img/blog/blog1.png" class="item-catgory" data-fancybox="iconCatgorys"><i class="icon-catgory icon-Shower"></i></a>
-                <a href="./public/img/blog/blog2.png" class="item-catgory" data-fancybox="iconCatgorys"><i class="icon-catgory icon-Dresser"></i></a>
-                <a href="./public/img/blog/blog3.png" class="item-catgory" data-fancybox="iconCatgorys"><i class="icon-catgory icon-Bath"></i></a>
-                <a href="./public/img/blog/blog4.png" class="item-catgory" data-fancybox="iconCatgorys"><i class="icon-catgory icon-Toilet-1"></i></a>
+                <a href="./public/img/blog/blog1.png" class="item-catgory win-btn" data-fancybox="iconCatgorys"><i
+                    class="icon-catgory icon-Shower"></i></a>
+                <a href="./public/img/blog/blog2.png" class="item-catgory win-btn" data-fancybox="iconCatgorys"><i
+                    class="icon-catgory icon-Dresser"></i></a>
+                <a href="./public/img/blog/blog3.png" class="item-catgory win-btn" data-fancybox="iconCatgorys"><i
+                    class="icon-catgory icon-Bath"></i></a>
+                <a href="./public/img/blog/blog4.png" class="item-catgory win-btn" data-fancybox="iconCatgorys"><i
+                    class="icon-catgory icon-Toilet-1"></i></a>
               </div>
               <div class="movieBox">
                 <i class="icon-movie icon-Play" id="play-icon"></i>
@@ -74,7 +78,7 @@
                 <h3 class="text-titrSlider">محصولات منتخب</h3>
               </div>
 
-              <a href="#" class="down-katalog">
+              <a href="#" class="down-katalog  win-btn">
                 <i class="icon-Katalog icon-Book"></i>
                 <p class="text-Katalog">دانلود کاتالوگ</p>
               </a>
@@ -125,7 +129,7 @@
 
             </div>
 
-            <a href="#" class="calling">
+            <a href="#" class="calling  win-btn">
               <i class="icon-call icon-Calling"></i>
               <p class="text-call">+98 992 242 1770</p>
             </a>
@@ -360,7 +364,7 @@
                 </div>
 
               </div>
-              <button type="submit" class="submit">ارسال</button>
+              <button type="submit" class="submit win-btn">ارسال</button>
             </form>
 
           </div>
@@ -395,11 +399,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
   <script>
-    $(document).ready(function () {
-      $("[data-fancybox]").fancybox();
+   $(document).ready(function () {
+      $("[data-fancybox]").fancybox({
+        // thumbs: {
+        //   autoStart: true
+        // }
+      });
     });
   </script>
-<script src="./src/js/base/fancyBox.min.js"></script>
+  <script src="./src/js/base/fancyBox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 </body>

@@ -1,33 +1,45 @@
 section.showPost {
 
+    .nav .lang .text-lang {
+        color: #000;
+        font-weight: bold;
+    }
+
+    .breadcrumb {
+        a {
+            color: #000;
+            font-weight: bold;
+        }
+    }
+
     .bg {
-        background-image: url(/public/img/hero/home.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        // background-image: url(/public/img/hero/home.png);
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // background-size: cover;
         width: 99%;
         height: 98vh;
         margin: 10px;
         position: fixed;
-        border-radius: 10px;
+        // border-radius: 10px;
         z-index: -1;
 
         &::after {
             content: "";
-            background-image: url(/public/images/shadowHome.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            // background-image: url(/public/images/shadowHome.png);
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // background-size: cover;
             width: 100%;
             height: 45%;
             display: block;
-            border-radius: 10px 10px 0 0;
+            // border-radius: 10px 10px 0 0;
         }
     }
 
 
     .post {
-        background-color: #f5f7fa;
+        background-color: #f2f2f2;
         padding: 20px;
         border-radius: 23px;
         position: relative;
@@ -43,17 +55,6 @@ section.showPost {
                 margin-bottom: 20px;
                 border-radius: 15px;
             }
-
-            // .grouping {
-            //     transition: all 0.3s;
-            //     color: #787878;
-            //     padding: 3px 10px;
-            //     border-radius: 5px;
-            //     background-color: #ebebeb;
-            //     font-size: 10px;
-            //     margin-bottom: 10px;
-            //     display: inline-block;
-            // }
 
             .info {
                 display: flex;
@@ -75,7 +76,7 @@ section.showPost {
                 }
 
                 .avatar-link {
-                    color: #ccb140;
+                    color: #cc3333;
                     font-size: 13px;
                     margin-right: 5px;
                     font-weight: 200;
@@ -93,7 +94,7 @@ section.showPost {
                         content: "";
                         width: 4px;
                         height: 4px;
-                        background: #ccb140;
+                        background: #cc3333;
                         border-radius: 50%;
                         position: absolute;
                         top: 50%;
@@ -111,12 +112,12 @@ section.showPost {
             .text-content {
                 line-height: 3.2;
                 font-size: 16px;
-                color: #9d9d9d;
+                color: #7a7a7a;
                 margin-bottom: 13px;
                 text-align: justify;
 
                 .link-textContent {
-                    color: #ccb140;
+                    color: #cc3333;
                 }
             }
 
@@ -152,7 +153,7 @@ section.showPost {
                 }
 
                 &:hover {
-                    color: #ccb140;
+                    color: #cc3333;
                 }
             }
 
@@ -171,7 +172,7 @@ section.showPost {
                 padding: 15px 25px;
 
                 &:hover {
-                    background-color: #ccb140;
+                    background-color: #cc3333;
                 }
             }
         }
@@ -239,6 +240,7 @@ section.showPost {
             }
 
         }
+
         ul.breadcrumb {
             padding-right: 15px;
         }
@@ -247,6 +249,19 @@ section.showPost {
 
 @media screen and (max-width: 375px) {
     section.showPost {
+
+        &::after,
+        &::before {
+            display: none;
+        }
+
+        .bg {
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            border-radius: 0;
+        }
+
         .post {
             .content {
                 .img-content {

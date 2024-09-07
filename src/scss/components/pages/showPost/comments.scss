@@ -16,15 +16,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #000;
             font-size: 25px;
             font-weight: bold;
             text-align: center;
 
             .title {
-                backdrop-filter: blur(10px);
                 border-radius: 10px;
-                color: #fff;
+                color: #000;
                 font-size: 23px;
                 padding: 15px 30px;
             }
@@ -33,7 +31,7 @@
         .comment_form {
             position: sticky;
             top: 120px;
-            background-color: #f5f7fa;
+            background-color: #f2f2f2;
             padding: 15px;
             border-radius: 15px;
             width: 25%;
@@ -48,7 +46,7 @@
 
                 input:focus-visible,
                 textarea:focus-visible {
-                    border: 2px solid #ccb140;
+                    border: 2px solid #cc3333;
                 }
 
                 input,
@@ -106,7 +104,8 @@
                 padding-block: 18px;
                 font-family: "dana";
                 cursor: pointer;
-                background-color: #242424;
+                // background-color: #242424;
+                background-color: #cc3333;
                 border: 1px solid #e9eef6;
                 color: #fff;
                 font-weight: 200;
@@ -116,7 +115,7 @@
                 transition: all 0.3s;
 
                 &:hover {
-                    background-color: #ccb140;
+                    background-color: #e64545;
                 }
             }
         }
@@ -125,7 +124,7 @@
             width: 73%;
 
             .comment_item {
-                background-color: #f6f8fc;
+                background-color: #f2f2f2;
                 border-radius: 15px;
                 padding: 20px;
 
@@ -148,7 +147,7 @@
                         .title {
                             font-weight: 300;
                             font-size: 18px;
-                            color: #ccb140;
+                            color: #cc3333;
                         }
                     }
 
@@ -191,7 +190,7 @@
                         cursor: pointer;
 
                         &:hover {
-                            color: #ccb140;
+                            color: #cc3333;
                         }
 
                         span {
@@ -238,7 +237,7 @@
         transition: all 0.3s;
 
         &:hover {
-            color: #fff;
+            color: #cc3333;
         }
     }
 }
