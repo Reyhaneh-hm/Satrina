@@ -4,7 +4,6 @@ import { resolve } from "path";
 
 export default {
   plugins: [Inspect()],
-  // base: "/linom/v2",
   css: {
     devSourcemap: true,
     postcss: "./postcss.config.js",
@@ -15,6 +14,7 @@ export default {
       input: {
         index: resolve(__dirname, "./index.html"),
         showBlog: resolve(__dirname, "./showBlog.html"),
+        showPost: resolve(__dirname, "./showPost.html"),
       },
     },
   },
