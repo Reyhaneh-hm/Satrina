@@ -9,6 +9,17 @@
     list-style: none;
 }
 
+.fancybox__container *,
+.fancybox__container *::before,
+.fancybox__container *::after {
+    direction: ltr;
+}
+.fancybox__slide .fancybox__content{
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
 ::-moz-selection {
     background: #cf5241;
     color: #fff;

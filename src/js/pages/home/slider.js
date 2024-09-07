@@ -47,33 +47,33 @@ import "slick-carousel/slick/slick-theme.css";
 $(document).ready(function () {
 
     //FancyBox
-    // Fancybox.bind('[data-fancybox]', {
-    //     infinite: true,
-    //     keyboard: true,
-    //     loop: true,
+    Fancybox.bind('[data-fancybox]', {
+        infinite: true,
+        keyboard: true,
+        loop: true,
 
-    //     buttons: [
-    //         'zoom',
-    //         'slideShow',
-    //         'fullScreen',
-    //         'download',
-    //         'thumbs',
-    //         'close'
-    //     ],
-    //     animationEffect: "zoom",
-    //     transitionEffect: "slide",
-    //     thumbs: {
-    //         autoStart: true
-    //     },
-    //     keyboard: true,
-    //     touch: true,
-    //     protect: true,
-    //     idleTime: false,
-    //     smallBtn: true,
-    //     toolbar: true,
-    //     animationDuration: 500,
-    //     transitionDuration: 600,
-    // });
+        buttons: [
+            'zoom',
+            'slideShow',
+            'fullScreen',
+            'download',
+            'thumbs',
+            'close'
+        ],
+        animationEffect: "zoom",
+        transitionEffect: "slide",
+        thumbs: {
+            autoStart: true
+        },
+        keyboard: true,
+        touch: true,
+        protect: true,
+        idleTime: false,
+        smallBtn: true,
+        toolbar: true,
+        animationDuration: 500,
+        transitionDuration: 600,
+    });
 
     //Slider
     $('.sliderBox').slick({
