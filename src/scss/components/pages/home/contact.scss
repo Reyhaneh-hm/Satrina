@@ -230,6 +230,15 @@
     }
 }
 
+#error-message {
+    font-size: 13px;
+    position: relative;
+    top: 7px;
+    right: 7px;
+    color: #cc3333;
+    display: block;
+}
+
 @media screen and (max-width: 1024px) {
 
     .contact {
