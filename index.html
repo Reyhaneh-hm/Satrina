@@ -260,13 +260,16 @@
               <h3 class="titr-form">اعضای نمایندگی ساترینا</h3>
             </div>
 
-            <form class="form">
+
+            <form onsubmit="return validateForm(event)" class="form" id="myForm">
               <div class="row">
 
                 <div class="col-md-4">
                   <div class="input_box">
                     <label>
-                      <input class="input" type="text" placeholder="" required="">
+                      <input class="input" value="" type="text" placeholder="" required=""
+                        oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')"
+                        oninput="this.setCustomValidity('')" name="name" id="name">
                       <span>نام و نام خانوادگی</span>
                     </label>
                   </div>
@@ -275,8 +278,13 @@
                 <div class="col-md-4">
                   <div class="input_box">
                     <label>
-                      <input class="input" type="number" placeholder="" required="">
+                      <input class="input" type="number" placeholder="" required=""
+                        oninvalid="this.setCustomValidity('شماره موبایل باید دقیقا 11 رقم باشد')"
+                        oninput="validateInput(this)" name="phone" id="phone" minlength="11" maxlength="11"
+                        pattern="[0-9]{11}">
                       <span>شماره موبایل</span>
+                      <div id="error-message" style="color: red; display: none;">شماره موبایل باید دقیقاً ۱۱ رقم باشد
+                      </div>
                     </label>
                   </div>
                 </div>
@@ -284,7 +292,9 @@
                 <div class="col-md-4">
                   <div class="input_box">
                     <label>
-                      <input class="input" type="text" placeholder="" required="">
+                      <input class="input" type="text" placeholder="" required=""
+                        oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')"
+                        oninput="this.setCustomValidity('')" name="instagram" id="instagram">
                       <span>پیج اینستاگرام</span>
                     </label>
                   </div>
@@ -293,7 +303,9 @@
                 <div class="col-md-4">
                   <div class="input_box">
                     <label>
-                      <input class="input" type="text" placeholder="" required="">
+                      <input class="input" type="text" placeholder="" required=""
+                        oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')"
+                        oninput="this.setCustomValidity('')" name="storeName" id="storeName">
                       <span>نام فروشگاه</span>
                     </label>
                   </div>
@@ -302,11 +314,10 @@
                 <div class="col-md-4">
                   <div class="input_box">
                     <label>
-                      <select class="form-control" name="استان">
-                        <span>استان</span>
-                        <option value="0" selected="" disabled="" placeholder="" required="">
-                          استان
-                        </option>
+                      <select class="form-control" name="province" required=""
+                        oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')"
+                        oninput="this.setCustomValidity('')" id="province">
+                        <option value="" disabled selected>استان</option>
                         <option value="آذربایجان شرقی">آذربایجان شرقی</option>
                         <option value="آذربایجان غربی">آذربایجان غربی</option>
                         <option value="اردبیل">اردبیل</option>
@@ -339,7 +350,6 @@
                         <option value="همدان">همدان</option>
                         <option value="یزد">یزد</option>
                       </select>
-                      <!-- <i class="arrow icon-Arrow-Left"></i> -->
                     </label>
                   </div>
                 </div>
@@ -347,9 +357,10 @@
                 <div class="col-md-4">
                   <div class="input_box">
                     <label>
-                      <input class="input" type="text" placeholder="" required="">
+                      <input class="input" type="text" placeholder="" required=""
+                        oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')"
+                        oninput="this.setCustomValidity('')" name="city" id="city">
                       <span>شهرستان</span>
-                      <!-- <i class="arrow icon-Arrow-Left"></i> -->
                     </label>
                   </div>
                 </div>
@@ -357,8 +368,8 @@
                 <div class="col-md-12">
                   <div class="input_box">
                     <label>
-                      <textarea name="" placeholder="مشخصات فروشگاه ، انبار و اسمپامی شرکت های دیگر..." id="" cols="30"
-                        rows="10"></textarea>
+                      <textarea name="desc" placeholder="مشخصات فروشگاه ، انبار و اسمپامی شرکت های دیگر..." id=""
+                        cols="30" rows="10"></textarea>
                     </label>
                   </div>
                 </div>
@@ -391,6 +402,36 @@
       </div>
     </div>
   </section>
+
+
+
+  <script>
+    function validateInput(input) {
+      input.value = input.value.replace(/[^0-9]/g, '');
+      if (input.value.length > 11) {
+        input.value = input.value.slice(0, 11);
+      }
+
+      const errorMessage = document.getElementById('error-message');
+      if (input.value.length === 11) {
+        errorMessage.style.display = 'none';
+      }
+    }
+
+    function validateForm(event) {
+      const mobile = document.getElementById('phone').value;
+      const errorMessage = document.getElementById('error-message');
+
+      if (mobile.length !== 11) {
+        errorMessage.textContent = 'شماره موبایل باید دقیقاً ۱۱ رقم باشد';
+        errorMessage.style.display = 'block';
+        return false;
+      }
+
+      errorMessage.style.display = 'none';
+      return true;
+    }
+  </script>
 
 
   <script type="module" src="/main.js"></script>
