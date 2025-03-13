@@ -127,10 +127,27 @@ section.hero {
                     justify-content: center;
                     cursor: pointer;
                     transition: all 0.3s;
+                    position: relative;
+                    z-index: 1;
 
                     .icon-catgory {
                         font-size: 33px;
                         color: #ffffff3d;
+                        transition: all 0.3s;
+                    }
+
+                    .desc {
+                        position: absolute;
+                        top: 75px;
+                        text-align: center;
+                        color: #bcbcbc;
+                        font-size: 16px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 1;
+                        width: 100%;
+                        z-index: 0;
+                        opacity: 0;
                         transition: all 0.3s;
                     }
 
@@ -139,6 +156,11 @@ section.hero {
 
                         .icon-catgory {
                             color: #fff;
+                        }
+
+                        .desc {
+                            top: 92px;
+                            opacity: 1;
                         }
                     }
                 }
