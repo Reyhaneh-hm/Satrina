@@ -1,15 +1,20 @@
 import Inspect from "vite-plugin-inspect";
 import { resolve } from "path";
 
-
 export default {
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+  },
+
   plugins: [Inspect()],
+  base: "./",
   css: {
-    devSourcemap: true,
+    devSourcemap: false, // جلوگیری از ایجاد sourcemap در محیط توسعه
     postcss: "./postcss.config.js",
   },
   build: {
-    sourcemap: true,
+    sourcemap: false, // جلوگیری از تولید sourcemap در بیلد
     rollupOptions: {
       input: {
         index: resolve(__dirname, "./index.html"),
@@ -17,12 +22,16 @@ export default {
         showPost: resolve(__dirname, "./showPost.html"),
       },
       output: {
+        entryFileNames: "assets/[name]-[hash].js",
+        chunkFileNames: "assets/[name]-[hash].js",
         assetFileNames: (assetInfo) => {
-          // تنظیم خروجی فایل برای تصاویر به عنوان فایل جداگانه
+          if (/\.(css)$/.test(assetInfo.name)) {
+            return 'assets/[name]-[hash][extname]';
+          }
           if (/\.(png|jpe?g|gif|svg)$/.test(assetInfo.name)) {
             return 'images/[name][extname]';
           }
-          return 'assets/[name][extname]';
+          return 'assets/[name]-[hash][extname]';
         },
       },
     },
