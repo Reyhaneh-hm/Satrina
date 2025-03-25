@@ -17,6 +17,7 @@
             .titr-slider {
                 display: flex;
                 align-items: center;
+                margin: 0 auto;
 
                 .icon-titrSlider {
                     color: #cc3333;
@@ -276,6 +277,8 @@
         .card {
             .calling {
                 bottom: -20px;
+                margin: 0 auto;
+                float: none !important;
             }
 
             .sliderBox {
