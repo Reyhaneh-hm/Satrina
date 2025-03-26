@@ -27,11 +27,15 @@ document.querySelectorAll(".win-btn").forEach((b) => {
   b.onmouseleave = (e) => {
     // e.target.style.background = "black";
     e.currentTarget.style.borderImage = null;
+    document.getElementById("categorys-desc").innerHTML = "&nbsp;";
   };
   b.addEventListener("mousemove", (e) => {
     const rect = e.target.getBoundingClientRect();
     const x = e.clientX - rect.left; //x position within the element.
     const y = e.clientY - rect.top; //y position within the element.  
     e.currentTarget.style.background = `radial-gradient(circle at ${x}px ${y}px , rgba(255,255,255,0.2),rgba(255,255,255,0) )`;
+
+    const h3Text = e.currentTarget.querySelector("h3.desc").innerText;
+    document.getElementById("categorys-desc").innerHTML = h3Text;
   });
 });
